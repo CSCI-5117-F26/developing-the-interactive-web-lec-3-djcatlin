@@ -12,10 +12,19 @@
   <img
     src="https://media.istockphoto.com/id/2210374375/photo/different-types-of-cheese-and-rosemary-on-wooden-table.jpg?s=612x612&w=0&k=20&c=TytEOlfTkd0Seqzoy6Er91oVejJfACcCD2zLzeDrno4="
     alt="Many cheeses on a cutting board">
-  <button id="addbutton">Add</button>
-  <ul>
-    <li>Dean</li>
-  </ul>
+  <form action="/form" method="POST">
+    <label for="name">Name</label><br>
+    <input type="text" id="name" name="name"><br>
+    <input type="submit" value="Submit">
+  </form>
+  <li>
+    <strong>Names {{ loop.index }}:</strong>
+    <ul>
+      {% for item in row %}
+      <li>{{ item }}</li>
+      {% endfor %}
+    </ul>
+  </li>
 </body>
 
 </html>

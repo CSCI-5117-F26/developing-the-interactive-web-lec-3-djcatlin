@@ -13,7 +13,7 @@ dependencies = [
 ]
 
 [project.scripts]
-developing-the-interactive-web-lec-3-djcatlin = "developing_the_interactive_web_lec_3_djcatlin:main"
+lec3 = "lec3:main"
 
 [build-system]
 requires = ["uv_build>=0.12.15,<0.13.0"]

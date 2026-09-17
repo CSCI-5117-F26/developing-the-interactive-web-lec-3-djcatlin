@@ -1,9 +1,20 @@
-from halo import Halo
-import time
+from flask import Flask
+from flask import render_template
+from flask import request 
+
+app = Flask(__name__)
+
+names = []
+
+@app.route("/")
+def main():
+  return render_template('index.html', names=list)
+
+@app.route('/form', methods=['POST'])
+def handle_form():
+    name = request.form.get('name') 
+    list.append(name)
+    return "a"
 
 def main() -> None:
-    spinner = Halo(text='Spinning', spinner='dots')
-    spinner.start()
-
-    time.sleep(60)
-    spinner.stop()
+    app.run()
