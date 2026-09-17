@@ -17,14 +17,14 @@
     <input type="text" id="name" name="name"><br>
     <input type="submit" value="Submit">
   </form>
-  <li>
-    <strong>Names {{ loop.index }}:</strong>
-    <ul>
-      {% for item in row %}
-      <li>{{ item }}</li>
-      {% endfor %}
-    </ul>
-  </li>
+  <h2>Members</h2>
+  <ul>
+    {% for item in names %}
+    <li>
+      {{ item }}
+    </li>
+    {% endfor %}
+  </ul>
 </body>
 
 </html>

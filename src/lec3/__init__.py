@@ -8,13 +8,13 @@ names = []
 
 @app.route("/")
 def main():
-  return render_template('index.html', names=list)
+  return render_template('index.html', names=names)
 
 @app.route('/form', methods=['POST'])
 def handle_form():
     name = request.form.get('name') 
-    list.append(name)
-    return "a"
+    names.append(name)
+    return render_template('index.html', names=names)
 
 def main() -> None:
     app.run()
